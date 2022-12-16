@@ -7,7 +7,7 @@ public class AppMain {
 	public static void main(String[] args) {
 
 		try {
-			String[] mainOptionCoins = {
+			String[] mainOption = {
 					"Convertir Monedas",
 					"Convertir Temperatura"
 					};
@@ -16,7 +16,7 @@ public class AppMain {
 			Function temps = new Function();
 
 			String option = (JOptionPane.showInputDialog(null, "Elige la opcion ", "Currency Converter",
-					JOptionPane.QUESTION_MESSAGE, null, mainOptionCoins, "Selecciona")).toString();
+					JOptionPane.QUESTION_MESSAGE, null, mainOption, "Selecciona")).toString();
 
 			switch (option) {
 			case "Convertir Monedas": {
@@ -47,7 +47,7 @@ public class AppMain {
 			int select = JOptionPane.showConfirmDialog(null, "¿Deseas realizar otra conversión?");
 
 			if (JOptionPane.OK_OPTION == select) {
-				main(mainOptionCoins);
+				main(mainOption);
 			} else {
 				JOptionPane.showMessageDialog(null, "Programa Terminado, gracias por utilizar.");
 			}
