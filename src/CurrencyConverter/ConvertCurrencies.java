@@ -4,8 +4,8 @@ import javax.swing.JOptionPane;
 
 public class ConvertCurrencies {
 
-	private double valueUsd = 830;
-	private double valueEur = 830;
+	private double valueUsd = 887;
+	private double valueEur = 940;
 
 	public void ConvertClpUsd(double inputReceived) {
 		double ConvertUsd = inputReceived / valueUsd;

@@ -8,9 +8,12 @@ public class Function {
 
 	public void ConvertCurrencies(double inputReceived) {
 
-		String[] convertOption = { "De Pesos a Dolar", "De Pesos a Libra" };
+		String[] convertOption = {
+				"De Pesos a Dolar",
+				"De Pesos a Euro"
+				};
 
-		String option = (JOptionPane.showInputDialog(null, "Elije la moneda a la que deseas convertir tu dinero ",
+		String option = (JOptionPane.showInputDialog(null, "¿Que conversión deseas realizar? ",
 				"Monedas", JOptionPane.PLAIN_MESSAGE, null, convertOption, "Selecciona")).toString();
 
 		switch (option) {
