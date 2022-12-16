@@ -4,11 +4,12 @@ import javax.swing.JOptionPane;
 
 public class Function {
 
-	ConvertCurrencies coins = new ConvertCurrencies();
+	ConvertCoins coins = new ConvertCoins();
+	ConvertTemperatures temps = new ConvertTemperatures();
 
-	public void ConvertCurrencies(double inputReceived) {
+	public void ConvertCoins(double inputReceived) {
 
-		String[] convertOption = {
+		String[] convertOptionCoin = {
 				"Pesos a Dolar",
 				"Pesos a Euro",
 				"Pesos a Libra",
@@ -22,10 +23,10 @@ public class Function {
 				"Won a Pesos"
 				};
 
-		String option = (JOptionPane.showInputDialog(null, "¿Que conversión deseas realizar? ", "Monedas",
-				JOptionPane.PLAIN_MESSAGE, null, convertOption, "Selecciona")).toString();
+		String optionCoin = (JOptionPane.showInputDialog(null, "¿Que conversión deseas realizar? ", "Monedas",
+				JOptionPane.PLAIN_MESSAGE, null, convertOptionCoin, "Selecciona")).toString();
 
-		switch (option) {
+		switch (optionCoin) {
 		case "Pesos a Dolar": {
 			coins.ConvertClpUsd(inputReceived);
 			break;
@@ -68,6 +69,39 @@ public class Function {
 		}
 		}
 
+	}
+
+	public void ConvertTemperatures(double inputReceived) {
+
+		String[] convertOption = {
+				"Celsius a Fahrenheit",
+				"Celsius a Kelvin",
+				//
+				"Fahrenheit a Celsius",
+				"Kelvin a Celsius",
+				};
+
+		String option = (JOptionPane.showInputDialog(null, "¿Que conversión deseas realizar? ", "Temperaturas",
+				JOptionPane.PLAIN_MESSAGE, null, convertOption, "Selecciona")).toString();
+
+		switch (option) {
+		case "Celsius a Fahrenheit": {
+			temps.ConvertCelFah(inputReceived);
+			break;
+		}
+		case "Celsius a Kelvin": {
+			temps.ConvertCelKel(inputReceived);
+			break;
+		}
+		case "Fahrenheit a Celsius": {
+			temps.ConvertFahCel(inputReceived);
+			break;
+		}
+		case "Kelvin a Celsius": {
+			temps.ConvertKelCel(inputReceived);
+			break;
+		}
+		}
 	}
 
 }

@@ -2,7 +2,7 @@ package CurrencyConverter;
 
 import javax.swing.JOptionPane;
 
-public class ConvertCurrencies {
+public class ConvertCoins {
 
 	private double valueUsd = 887;
 	private double valueEur = 940;
